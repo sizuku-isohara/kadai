@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>top</title>
+</head>
+
+<body>
+  <h2>このページの訪問回数: <%= count %></h2> <!-- アクセスカウンター表示 -->
+
+  <ul class="user-list">
+    <% for (const user of users) { %>
+      <li class="user-name"><%= user %></li>
+    <% } %>
+  </ul>
+
+  <input type="text" class="input-text" />
+  <button class="send-button">送信</button>
+
+  <!-- クリックカウンターのセクション -->
+  <h2>クリックカウンター</h2>
+  <p>現在のカウント: <span id="click-count">0</span></p>
+  <button id="increment-button">クリックしてカウントを増やす</button>
+
+  <script src="/static/index.js" defer></script>
+
+
+  <h1>Character Counter</h1>
+  <textarea id="text-area" rows="4" cols="50"></textarea>
+  <p>Character count: <span id="char-count">0</span></p>
+  <script src="/static/index.js" defer></script>
+
+
+  <h1>Change Background Color</h1>
+  <button id="change-color">Change Color</button>
+  <script src="/static/index.js" defer></script>
+  
+  
+  
+  <h2>サーバー稼働時間: <%= typeof uptime !== 'undefined' ? uptime : 'N/A' %> 秒</h2>
+  
+  <ul class="user-list">
+    <% for (const user of users) { %>
+      <li class="user-name"><%= user %></li>
+    <% } %>
+  </ul>
+
+</body>
+
+</html>
